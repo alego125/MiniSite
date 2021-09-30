@@ -27,6 +27,10 @@ body{
     overflow-x: hidden;
 }
 
+body h2{
+    font-size: 30px;
+}
+
 img{
     max-width: 100%;
     height: auto;
@@ -133,10 +137,6 @@ img{
 
 /*++++++++++++++ Seccion de Reloj digital y alarma +++++++++++++++++*/
 
-#seccion1{
-    font-size: 30px;
-}
-
 .btn-reloj{
     border: none;
     background-color: rgba(0, 0, 0, 0.85);
@@ -158,4 +158,22 @@ img{
 
 .hidde-btn{
     visibility: hidden;
+}
+
+/********************* Eventos del Teclado ***************************/
+
+/* Asignamos el estilo para la caja donde estara moviendose la bola */
+.stage{
+    display: flex;
+    min-height: 50vh; /*Colocamos que sea del 50% del viewport de alto solameten por que no queremos que ocupe toda la pantalla*/
+    background-color: var(--second-color);
+}
+
+/* Asignamos el estilo para la bola que se movera adentro ponemos de alto y anchoi lo mismo y luego un 50% de radio para que sea haga la bola */
+.ball{
+    margin: auto;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--main-color);    
 }
