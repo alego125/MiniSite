@@ -6,6 +6,8 @@ import {digitalClock,alarm} from "./reloj.js";
 //De esta manera importamos dos funciones funtas en una linea {funcion 1, funcion 2}
 import { shortcuts, moveBall } from "./teclado.js";
 //Importamos de el archivo de teclado la funcion de shortcuts
+import countdown from "./cuenta_regresiva.js";
+//Importamos el modulo de la cuenta regresiva
 
 const d = document;
 
@@ -15,6 +17,14 @@ d.addEventListener('DOMContentLoaded', e => {
     digitalClock("reloj","#activar-reloj","#desactivar-reloj");
     //Le pasamos igualmente a alarm los parameros a usar que son la direccion donde se encuentra el sonido y los dos botones o selectores de los botones de iniciar y parar
     alarm("asset/alarma.mp3","#activar-alarma","#desactivar-alarma");
+    //Ejecutamos la funcion countdawn
+    countdown(
+        "countdown",
+        "Jan 1 2022 00:00:00", 
+        //"Nov 20 2021 00:00:00", //Fecha de mi cumpleaños
+        "✨✨Feliz año nuevo✨✨",
+        "asset/alarma.mp3",
+        "btn-alarm");
 });
 
 //Para los movimientos con el teclado vamos a tener 3 tipos de eventos (cuando presiono, cuando suelto y cuando dejo presionado), todos los vamos a aplicar a el documento o nodo raiz
