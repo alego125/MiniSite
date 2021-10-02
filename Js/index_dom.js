@@ -8,6 +8,8 @@ import { shortcuts, moveBall } from "./teclado.js";
 //Importamos de el archivo de teclado la funcion de shortcuts
 import countdown from "./cuenta_regresiva.js";
 //Importamos el modulo de la cuenta regresiva
+import scrollTopButton from "./button_scoll.js";
+//Importamos el modulo que tiene la funcion que ejecuta la logica del boton de scroll
 
 const d = document;
 
@@ -25,6 +27,9 @@ d.addEventListener('DOMContentLoaded', e => {
         "✨✨Feliz año nuevo✨✨",
         "asset/alarma.mp3",
         "btn-alarm");
+    //Traemos la funcion scroll para que se ejecute al cargar el DOM
+    //Como parametro le pasamos el selector del boton y como es una clase la debemos pasar con el punto
+    scrollTopButton(".scroll-top-btn");
 });
 
 //Para los movimientos con el teclado vamos a tener 3 tipos de eventos (cuando presiono, cuando suelto y cuando dejo presionado), todos los vamos a aplicar a el documento o nodo raiz
